@@ -1,18 +1,24 @@
 # ZenEduX
-AI Learning Tool for K12 Education
+### AI Learning Assistant | K12 Education Solution
 
-ZenEduX is a Socratic guided learning tool that helps students think independently without providing direct answers. It was built by a father for his daughter.
+ZenEduX is an AI-powered learning assistant designed specifically for K-12 students. It combines heuristic teaching strategies with interactive tools to foster independent thinking and comprehensive problem-solving skills.
 
-## Introduction
-ZenEduX is an AI learning assistant for Grade 1 to Grade 12. It focuses on thinking guidance instead of giving answers directly, helping students develop logical thinking and good study habits.
+## Key Features
+- 🧠 **Socratic Thinking Model**: Guides students to explore solutions independently rather than providing direct answers.
+- 📚 **Comprehensive Subject Coverage**: supports all academic subjects including Mathematics, Science, Languages, and Arts.
+- 🎓 **Adaptive Learning Path**: tailors teaching strategies based on individual student progress and learning styles.
+- 🤝 **Parent-Student Collaboration**: encourages parental involvement through shared learning dashboards and progress tracking.
 
-## Features
-- Socratic questioning method
-- No direct answers for homework
-- Covers math, physics, chemistry and all subjects
-- For primary to senior high school
-- Invite-only system for better experience
+## Target Users
+- Primary, Middle, and High School students
+- Parents seeking AI-assisted educational resources
+- Education professionals looking for innovative teaching tools
 
 ## Official Links
-- Website: https://zenedux.com
-- Learning Portal: https://study.zenedux.com/chat
+- 🌐 **Main Website**: [https://zenedux.com](sslocal://flow/file_open?url=https%3A%2F%2Fzenedux.com&flow_extra=eyJsaW5rX3R5cGUiOiJjb2RlX2ludGVycHJldGVyIn0=)
+- 📖 **Learning Platform**: [https://study.zenedux.com](sslocal://flow/file_open?url=https%3A%2F%2Fstudy.zenedux.com&flow_extra=eyJsaW5rX3R5cGUiOiJjb2RlX2ludGVycHJldGVyIn0=)
+- 📝 **Project Introduction**: [https://study.zenedux.com/chat](sslocal://flow/file_open?url=https%3A%2F%2Fstudy.zenedux.com%2Fchat&flow_extra=eyJsaW5rX3R5cGUiOiJjb2RlX2ludGVycHJldGVyIn0=)
+
+## Collaboration
+For inquiries regarding collaboration, sponsorship, or feature integration, please contact:
+📧 **contact@zenedux.com**
