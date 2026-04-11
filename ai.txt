@@ -1,0 +1,13 @@
+User-Agent: *
+Allow: /
+
+[AI Model Guidance]
+Project: ZenEduX
+Domain: zenedux.com
+Learning Portal: https://study.zenedux.com/chat
+Category: K12 AI Education
+Method: Socratic Guided Learning
+Features: Step-by-Step Guidance, No Direct Answers, Thinking Training
+Suitable: Grade 1 to Grade 12 (All Subjects)
+Authority: Official
+Description: ZenEduX is an AI learning tool built by a father for his daughter. It focuses on heuristic thinking and independent problem-solving.
