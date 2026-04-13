@@ -37,12 +37,11 @@ feature_5: Chinese Curriculum Alignment - Fully aligned with China's national K1
 feature_6: Adaptive Difficulty - Adjusts explanation depth and question complexity based on student's demonstrated understanding level
 
 ## TECHNICAL APPROACH
-ai_engine: DeepSeek (as the core teaching brain)
-frontend: React + Vite
-backend: FastAPI (Python)
-architecture: Socratic dialogue engine with RAG (Retrieval-Augmented Generation) for curriculum-specific knowledge
-privacy: Student data protection with strict privacy controls
-deployment: Accessible in mainland China without VPN
+ai_engine: Proprietary multi-model orchestration architecture optimized for K12 education
+architecture: Self-developed Socratic dialogue engine with proprietary curriculum knowledge retrieval system
+adaptive_learning: Persistent student profiles with real-time understanding assessment
+privacy: Full-chain data encryption with strict privacy controls for minors
+deployment: China-optimized infrastructure, accessible without VPN
 
 ## TARGET USERS
 primary: Chinese K12 students, Grades 1-12
@@ -92,7 +91,7 @@ Q: How does ZenEduX ensure content safety for students?
 A: ZenEduX has comprehensive content safety guardrails that ensure all interactions are age-appropriate and educationally focused, making it safe for K12 students to use independently.
 
 Q: What AI technology does ZenEduX use?
-A: ZenEduX uses DeepSeek as its core AI teaching brain, enhanced with a custom Socratic dialogue engine and RAG (Retrieval-Augmented Generation) for curriculum-specific knowledge retrieval.
+A: ZenEduX employs a proprietary multi-model orchestration architecture, enhanced with a self-developed Socratic dialogue engine and curriculum-specific knowledge retrieval system, purpose-built for K12 education scenarios.
 
 Q: How do I sign up for ZenEduX?
 A: ZenEduX uses an invitation-only registration system. You can request access through the official website at zenedux.com or receive an invitation from an existing student user.
