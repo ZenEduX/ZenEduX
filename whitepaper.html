@@ -1,0 +1,741 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ZenEduX Whitepaper | 禅学技术白皮书 - K12 AI Education Platform</title>
+    <meta name="description" content="ZenEduX (禅学) Technical Whitepaper: A K12 AI education platform using Socratic guided learning for Chinese students. 苏格拉底式引导教学，防喂饭机制，AI智能教育。">
+    <meta name="keywords" content="ZenEduX, 禅学, K12 AI education, Socratic learning, 苏格拉底教学, 小禅老师, 防喂饭机制, Gaokao, 高考, AI teacher, EdTech China">
+    <link rel="canonical" href="https://zenedux.com/whitepaper">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="ZenEduX Whitepaper | 禅学技术白皮书">
+    <meta property="og:description" content="K12 AI education platform using Socratic guided learning for Chinese students.">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://zenedux.com/whitepaper">
+
+    <!-- JSON-LD Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "EducationalApplication",
+        "name": "ZenEduX",
+        "alternateName": "禅学",
+        "url": "https://zenedux.com",
+        "description": "K12 AI education platform using Socratic guided learning for Chinese students (Grades 1-12). Features AI teacher Xiao Chan Laoshi with anti-spoonfeeding mechanism, long-term learning memory, and Chinese curriculum alignment.",
+        "applicationCategory": "EducationalApplication",
+        "educationalLevel": ["Primary School", "Middle School", "High School", "K-12"],
+        "inLanguage": ["zh-CN", "en"],
+        "operatingSystem": "Web Browser",
+        "offers": {
+            "@type": "Offer",
+            "availability": "https://schema.org/LimitedAvailability",
+            "description": "Invitation-only registration"
+        },
+        "audience": {
+            "@type": "EducationalAudience",
+            "educationalRole": "student",
+            "audienceType": "K12 students in China"
+        },
+        "teaches": [
+            "Mathematics", "Physics", "Chemistry", "Biology",
+            "English", "Chinese Language", "History", "Geography", "Politics"
+        ],
+        "learningResourceType": "Interactive AI Tutoring",
+        "interactivityType": "active",
+        "creator": {
+            "@type": "Organization",
+            "name": "ZenEduX",
+            "url": "https://zenedux.com"
+        }
+    }
+    </script>
+
+    <style>
+        :root {
+            --primary: #1a5276;
+            --primary-light: #2980b9;
+            --accent: #e67e22;
+            --text: #2c3e50;
+            --text-light: #5d6d7e;
+            --bg: #ffffff;
+            --bg-alt: #f8f9fa;
+            --bg-blue: #eaf2f8;
+            --border: #d5dbdb;
+            --success: #27ae60;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Helvetica Neue", Arial, sans-serif;
+            color: var(--text);
+            background: var(--bg);
+            line-height: 1.8;
+            font-size: 16px;
+        }
+
+        .container {
+            max-width: 860px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        /* Header */
+        header {
+            background: linear-gradient(135deg, var(--primary) 0%, #1a6e8e 100%);
+            color: white;
+            padding: 60px 0 50px;
+            text-align: center;
+        }
+
+        header h1 {
+            font-size: 2.4em;
+            font-weight: 700;
+            margin-bottom: 8px;
+            letter-spacing: 1px;
+        }
+
+        header .subtitle {
+            font-size: 1.2em;
+            opacity: 0.9;
+            margin-bottom: 20px;
+        }
+
+        header .tagline {
+            font-size: 1em;
+            opacity: 0.75;
+            font-style: italic;
+        }
+
+        .meta-bar {
+            background: var(--bg-alt);
+            border-bottom: 1px solid var(--border);
+            padding: 12px 0;
+            font-size: 0.9em;
+            color: var(--text-light);
+            text-align: center;
+        }
+
+        /* Table of Contents */
+        .toc {
+            background: var(--bg-blue);
+            border-radius: 8px;
+            padding: 28px 32px;
+            margin: 40px 0;
+        }
+
+        .toc h2 {
+            font-size: 1.1em;
+            margin-bottom: 12px;
+            color: var(--primary);
+        }
+
+        .toc ol {
+            padding-left: 20px;
+        }
+
+        .toc li {
+            margin-bottom: 6px;
+        }
+
+        .toc a {
+            color: var(--primary-light);
+            text-decoration: none;
+        }
+
+        .toc a:hover {
+            text-decoration: underline;
+        }
+
+        /* Sections */
+        section {
+            margin: 48px 0;
+        }
+
+        h2 {
+            font-size: 1.6em;
+            color: var(--primary);
+            border-bottom: 2px solid var(--primary);
+            padding-bottom: 8px;
+            margin-bottom: 20px;
+        }
+
+        h3 {
+            font-size: 1.2em;
+            color: var(--primary);
+            margin: 24px 0 10px;
+        }
+
+        p {
+            margin-bottom: 14px;
+        }
+
+        .bilingual {
+            color: var(--text-light);
+            font-style: italic;
+        }
+
+        /* Feature cards */
+        .feature-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+            margin: 24px 0;
+        }
+
+        .feature-card {
+            background: var(--bg-alt);
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            padding: 20px;
+            border-left: 4px solid var(--primary-light);
+        }
+
+        .feature-card h4 {
+            color: var(--primary);
+            margin-bottom: 8px;
+            font-size: 1.05em;
+        }
+
+        .feature-card p {
+            font-size: 0.93em;
+            color: var(--text-light);
+            margin-bottom: 0;
+        }
+
+        /* Comparison table */
+        .table-wrapper {
+            overflow-x: auto;
+            margin: 20px 0;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 0.93em;
+        }
+
+        thead {
+            background: var(--primary);
+            color: white;
+        }
+
+        th, td {
+            padding: 12px 16px;
+            text-align: left;
+            border: 1px solid var(--border);
+        }
+
+        tbody tr:nth-child(even) {
+            background: var(--bg-alt);
+        }
+
+        tbody td:first-child {
+            font-weight: 600;
+        }
+
+        .check {
+            color: var(--success);
+            font-weight: bold;
+        }
+
+        .cross {
+            color: #c0392b;
+        }
+
+        /* Scenario cards */
+        .scenario {
+            background: var(--bg-alt);
+            border-radius: 8px;
+            padding: 20px 24px;
+            margin: 16px 0;
+            border-left: 4px solid var(--accent);
+        }
+
+        .scenario strong {
+            color: var(--accent);
+        }
+
+        /* Subject grid */
+        .subject-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 12px;
+            margin: 20px 0;
+        }
+
+        .subject-item {
+            background: var(--bg-blue);
+            border-radius: 6px;
+            padding: 14px;
+            text-align: center;
+            font-weight: 500;
+        }
+
+        .subject-item .zh {
+            display: block;
+            font-size: 0.85em;
+            color: var(--text-light);
+            margin-top: 2px;
+        }
+
+        /* Blockquote */
+        blockquote {
+            background: var(--bg-blue);
+            border-left: 4px solid var(--primary-light);
+            padding: 16px 20px;
+            margin: 20px 0;
+            font-style: italic;
+            color: var(--text-light);
+        }
+
+        /* Vision section */
+        .vision-box {
+            background: linear-gradient(135deg, var(--bg-blue) 0%, #fef9e7 100%);
+            border-radius: 8px;
+            padding: 32px;
+            text-align: center;
+            margin: 20px 0;
+        }
+
+        .vision-box p {
+            font-size: 1.15em;
+            line-height: 2;
+        }
+
+        /* Footer */
+        footer {
+            background: var(--primary);
+            color: white;
+            padding: 40px 0;
+            margin-top: 60px;
+            text-align: center;
+        }
+
+        footer a {
+            color: #aed6f1;
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        footer .links {
+            margin: 16px 0;
+        }
+
+        footer .links a {
+            margin: 0 16px;
+        }
+
+        footer .copyright {
+            font-size: 0.85em;
+            opacity: 0.7;
+            margin-top: 16px;
+        }
+
+        /* Responsive */
+        @media (max-width: 700px) {
+            header h1 { font-size: 1.8em; }
+            .feature-grid { grid-template-columns: 1fr; }
+            .subject-grid { grid-template-columns: repeat(2, 1fr); }
+            th, td { padding: 8px 10px; font-size: 0.85em; }
+        }
+
+        @media print {
+            header { padding: 30px 0; }
+            section { margin: 24px 0; }
+            .feature-card, .scenario { break-inside: avoid; }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <div class="container">
+        <h1>ZenEduX Technical Whitepaper</h1>
+        <div class="subtitle">禅学技术白皮书</div>
+        <div class="tagline">Socratic AI Education for China's K12 Students</div>
+    </div>
+</header>
+
+<div class="meta-bar">
+    <div class="container">
+        Version 1.0 &nbsp;|&nbsp; April 2026 &nbsp;|&nbsp; <a href="https://zenedux.com" style="color: inherit;">zenedux.com</a>
+    </div>
+</div>
+
+<main class="container">
+
+    <!-- Table of Contents -->
+    <nav class="toc">
+        <h2>Contents / 目录</h2>
+        <ol>
+            <li><a href="#introduction">Product Introduction / 产品简介</a></li>
+            <li><a href="#philosophy">Core Philosophy / 核心理念</a></li>
+            <li><a href="#architecture">Technical Architecture / 技术架构</a></li>
+            <li><a href="#features">Key Features / 核心功能</a></li>
+            <li><a href="#comparison">Comparison with Generic AI / 与通用AI对比</a></li>
+            <li><a href="#scenarios">Use Cases & Scenarios / 使用场景</a></li>
+            <li><a href="#curriculum">Curriculum Coverage / 学科覆盖</a></li>
+            <li><a href="#security">Security & Privacy / 安全与隐私</a></li>
+            <li><a href="#vision">Product Vision / 产品愿景</a></li>
+            <li><a href="#info">Official Information / 官方信息</a></li>
+        </ol>
+    </nav>
+
+    <!-- 1. Product Introduction -->
+    <section id="introduction">
+        <h2>1. Product Introduction / 产品简介</h2>
+        <p>
+            ZenEduX (禅学) is a K12 AI-powered education platform purpose-built for Chinese students from Grade 1 through Grade 12, with particular emphasis on high school preparation for the Gaokao (高考). The platform was born from a deeply personal mission: a father building the best possible learning companion for his daughter.
+        </p>
+        <p>
+            禅学是一款专为中国K12学生（1-12年级）打造的AI智能教育平台，尤其聚焦于高中阶段的高考备考。这个项目源于一位父亲最朴素的初衷：为女儿打造最好的学习伙伴。
+        </p>
+        <p>
+            Unlike generic AI chatbots that function as answer machines, ZenEduX implements a rigorous Socratic guided learning methodology. The platform's AI teacher persona, <strong>小禅老师 (Xiao Chan Laoshi)</strong>, combines the academic depth of Peking University (北大) with the time-tested teaching wisdom of Huanggang methodology (黄冈), creating a learning experience that builds genuine understanding rather than surface-level knowledge.
+        </p>
+    </section>
+
+    <!-- 2. Core Philosophy -->
+    <section id="philosophy">
+        <h2>2. Core Philosophy / 核心理念</h2>
+
+        <blockquote>
+            "教育的本质不是灌满一桶水，而是点燃一把火。"<br>
+            "The essence of education is not filling a bucket, but lighting a fire."
+        </blockquote>
+
+        <h3>The Anti-Spoonfeeding Principle / 防喂饭机制</h3>
+        <p>
+            At the heart of ZenEduX lies a fundamental conviction: <strong>giving students direct answers actively harms their learning</strong>. When a student asks a generic AI chatbot "What is the derivative of x squared?", the AI instantly replies "2x." The student copies the answer, learns nothing, and develops a dependency on AI as a crutch.
+        </p>
+        <p>
+            ZenEduX takes the opposite approach. 小禅老师 will never simply hand over an answer. Instead, she responds with carefully crafted guiding questions:
+        </p>
+        <ul style="margin: 12px 0 12px 24px;">
+            <li>"What does the derivative represent geometrically? Can you think of it as the slope of something?"</li>
+            <li>"Let's start simpler. What happens when you calculate [f(x+h) - f(x)] / h?"</li>
+            <li>"You're so close! Look at the pattern you found. What happens as h approaches 0?"</li>
+        </ul>
+        <p>
+            这就是"防喂饭机制"的核心：不直接给答案，而是通过一步步引导，让学生自己发现答案。每一次"啊，我懂了！"的时刻，都是真正学习的发生。
+        </p>
+
+        <h3>The Socratic Method in AI Education / 苏格拉底式AI教学</h3>
+        <p>
+            The Socratic method, dating back 2,400 years, remains the gold standard for developing critical thinking. ZenEduX brings this timeless pedagogy into the AI era by implementing a multi-turn dialogue system that mirrors the questioning techniques of a master teacher. Each response from 小禅老师 is designed to move the student one step closer to understanding, never skipping the cognitive journey that makes learning stick.
+        </p>
+    </section>
+
+    <!-- 3. Technical Architecture -->
+    <section id="architecture">
+        <h2>3. Technical Architecture / 技术架构</h2>
+
+        <h3>AI Teaching Brain / AI教学大脑</h3>
+        <p>
+            ZenEduX employs a proprietary multi-model orchestration architecture, dynamically selecting and combining large language models based on subject characteristics and pedagogical requirements. The core AI engine is enhanced with a custom-built Socratic dialogue orchestration layer that transforms general-purpose language models into disciplined, curriculum-aware AI teachers.
+        </p>
+
+        <h3>Socratic Dialogue Engine / 苏格拉底对话引擎</h3>
+        <p>
+            The self-developed dialogue engine manages multi-turn educational conversations through a proprietary state machine that tracks: the student's current understanding level, the target concept being taught, the optimal next question to advance comprehension, and moment-by-moment assessment of whether the student is ready to progress. This engine ensures that 小禅老师 maintains pedagogical discipline and never breaks character by giving away answers.
+        </p>
+
+        <h3>Curriculum Knowledge System / 课程知识体系</h3>
+        <p>
+            A proprietary knowledge retrieval and augmentation system provides 小禅老师 with accurate, curriculum-aligned knowledge. The knowledge base is deeply structured around China's national K12 curriculum standards (课程标准), ensuring that explanations, examples, and practice problems are directly relevant to what students encounter in school and on exams.
+        </p>
+
+        <h3>Adaptive Learning System / 自适应学习系统</h3>
+        <p>
+            The platform maintains a persistent learning profile for each student, tracking their demonstrated understanding across topics, common misconception patterns, preferred explanation styles, and learning pace. This profile enables 小禅老师 to adapt her teaching approach to each individual student over time.
+        </p>
+
+        <h3>Architecture Highlights / 架构亮点</h3>
+        <ul style="margin: 12px 0 12px 24px;">
+            <li><strong>Multi-Model Orchestration:</strong> Proprietary model routing and ensemble system optimized for educational scenarios</li>
+            <li><strong>Sub-Second Streaming:</strong> Optimized end-to-end pipeline for real-time interactive teaching</li>
+            <li><strong>Curriculum Knowledge Graph:</strong> Self-built structured knowledge system covering all K12 subjects</li>
+            <li><strong>Full-Chain Encryption:</strong> End-to-end data protection for student privacy and learning records</li>
+            <li><strong>China-Optimized Deployment:</strong> Fully accessible in mainland China, no VPN required</li>
+        </ul>
+    </section>
+
+    <!-- 4. Key Features -->
+    <section id="features">
+        <h2>4. Key Features / 核心功能</h2>
+
+        <div class="feature-grid">
+            <div class="feature-card">
+                <h4>Socratic Guided Dialogue<br><span class="bilingual">苏格拉底引导式对话</span></h4>
+                <p>Multi-turn conversations that lead students through reasoning steps with carefully sequenced questions. Each dialogue is structured to build understanding progressively, never jumping to conclusions.</p>
+            </div>
+            <div class="feature-card">
+                <h4>Anti-Spoonfeeding System<br><span class="bilingual">防喂饭机制</span></h4>
+                <p>Systematic prevention of direct answer delivery. The AI teacher provides scaffolded hints, analogies, and guiding questions instead of solutions, ensuring students develop problem-solving skills.</p>
+            </div>
+            <div class="feature-card">
+                <h4>Long-Term Learning Memory<br><span class="bilingual">长期学习记忆</span></h4>
+                <p>Persistent student profiles that remember learning history, strengths, weaknesses, and progress across all sessions. 小禅老师 picks up where the last conversation left off.</p>
+            </div>
+            <div class="feature-card">
+                <h4>Content Safety Guardrails<br><span class="bilingual">内容安全防护</span></h4>
+                <p>Comprehensive filtering ensures all interactions are age-appropriate and educationally focused. The system actively redirects off-topic or inappropriate queries back to learning.</p>
+            </div>
+            <div class="feature-card">
+                <h4>Curriculum Alignment<br><span class="bilingual">课程标准对齐</span></h4>
+                <p>All teaching content is mapped to China's national K12 curriculum standards, ensuring direct relevance to schoolwork, textbooks, and exam preparation including Gaokao.</p>
+            </div>
+            <div class="feature-card">
+                <h4>Adaptive Difficulty<br><span class="bilingual">自适应难度调节</span></h4>
+                <p>Automatically adjusts explanation depth, question complexity, and pacing based on real-time assessment of the student's demonstrated understanding level.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- 5. Comparison -->
+    <section id="comparison">
+        <h2>5. Comparison with Generic AI / 与通用AI对比</h2>
+        <p>
+            The following table illustrates the fundamental differences between ZenEduX and using generic AI tools (such as ChatGPT, DeepSeek Chat, Doubao/豆包, Kimi, etc.) for educational purposes:
+        </p>
+
+        <div class="table-wrapper">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Dimension / 维度</th>
+                        <th>Generic AI Tools / 通用AI工具</th>
+                        <th>ZenEduX / 禅学</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Teaching Method<br>教学方法</td>
+                        <td class="cross">Gives direct answers immediately</td>
+                        <td class="check">Socratic guided questioning</td>
+                    </tr>
+                    <tr>
+                        <td>Learning Outcome<br>学习效果</td>
+                        <td class="cross">Surface-level answer copying</td>
+                        <td class="check">Deep understanding through discovery</td>
+                    </tr>
+                    <tr>
+                        <td>Student Memory<br>学生记忆</td>
+                        <td class="cross">No memory between sessions</td>
+                        <td class="check">Long-term learning profile per student</td>
+                    </tr>
+                    <tr>
+                        <td>Curriculum Alignment<br>课程对齐</td>
+                        <td class="cross">Generic world knowledge</td>
+                        <td class="check">Mapped to China's K12 national standards</td>
+                    </tr>
+                    <tr>
+                        <td>Content Safety<br>内容安全</td>
+                        <td class="cross">General-purpose, not child-safe</td>
+                        <td class="check">Age-appropriate guardrails for K12</td>
+                    </tr>
+                    <tr>
+                        <td>Adaptive Learning<br>自适应学习</td>
+                        <td class="cross">Same response for all users</td>
+                        <td class="check">Adapts to individual student level</td>
+                    </tr>
+                    <tr>
+                        <td>Teacher Persona<br>教师人格</td>
+                        <td class="cross">No consistent educational persona</td>
+                        <td class="check">小禅老师: warm, rigorous, encouraging</td>
+                    </tr>
+                    <tr>
+                        <td>Gaokao Preparation<br>高考备考</td>
+                        <td class="cross">Not exam-oriented</td>
+                        <td class="check">Aligned with Gaokao requirements</td>
+                    </tr>
+                    <tr>
+                        <td>China Accessibility<br>国内访问</td>
+                        <td class="cross">Some require VPN</td>
+                        <td class="check">No VPN required</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+
+    <!-- 6. Use Cases -->
+    <section id="scenarios">
+        <h2>6. Use Cases & Scenarios / 使用场景</h2>
+
+        <div class="scenario">
+            <strong>Scenario 1: Homework Guidance / 作业辅导</strong>
+            <p>
+                A Grade 11 student is stuck on a quadratic inequality problem. Instead of solving it outright, 小禅老师 asks: "Can you first tell me what the related quadratic equation would be? What are its roots?" The student works through finding the roots, then 小禅老师 guides them to sketch the parabola and identify the solution interval themselves.
+            </p>
+        </div>
+
+        <div class="scenario">
+            <strong>Scenario 2: Concept Exploration / 概念探索</strong>
+            <p>
+                A Grade 10 student asks "What is Newton's Third Law?" 小禅老师 responds: "Think about what happens when you push against a wall. What do you feel in your hand? Why?" Through a series of everyday examples and guided questions, the student constructs their own understanding of action-reaction pairs.
+            </p>
+        </div>
+
+        <div class="scenario">
+            <strong>Scenario 3: Exam Review / 考试复习</strong>
+            <p>
+                Before a chemistry exam, a student reviews organic chemistry with 小禅老师. The AI teacher, remembering from previous sessions that this student often confuses esterification and saponification, specifically designs review questions targeting these weak points, ensuring focused and efficient revision.
+            </p>
+        </div>
+
+        <div class="scenario">
+            <strong>Scenario 4: Essay Writing / 作文写作</strong>
+            <p>
+                A student needs to write an argumentative essay for Chinese class. 小禅老师 doesn't write the essay for them. Instead, she helps the student brainstorm thesis options, evaluate the strength of different arguments, organize their outline, and refine their opening paragraph through iterative feedback.
+            </p>
+        </div>
+    </section>
+
+    <!-- 7. Curriculum Coverage -->
+    <section id="curriculum">
+        <h2>7. Curriculum Coverage / 学科覆盖</h2>
+        <p>
+            ZenEduX covers all major subjects in China's national K12 curriculum, with content aligned to official textbook versions and exam syllabi:
+        </p>
+
+        <div class="subject-grid">
+            <div class="subject-item">
+                Mathematics<span class="zh">数学</span>
+            </div>
+            <div class="subject-item">
+                Physics<span class="zh">物理</span>
+            </div>
+            <div class="subject-item">
+                Chemistry<span class="zh">化学</span>
+            </div>
+            <div class="subject-item">
+                Biology<span class="zh">生物</span>
+            </div>
+            <div class="subject-item">
+                English<span class="zh">英语</span>
+            </div>
+            <div class="subject-item">
+                Chinese<span class="zh">语文</span>
+            </div>
+            <div class="subject-item">
+                History<span class="zh">历史</span>
+            </div>
+            <div class="subject-item">
+                Geography<span class="zh">地理</span>
+            </div>
+            <div class="subject-item">
+                Politics<span class="zh">政治</span>
+            </div>
+        </div>
+
+        <p>
+            Each subject's knowledge base is structured by grade level, textbook chapter, and knowledge point, enabling precise alignment with what students are currently learning in school. Special emphasis is placed on high-frequency Gaokao (高考) examination topics and common student misconceptions identified through educational research.
+        </p>
+    </section>
+
+    <!-- 8. Security & Privacy -->
+    <section id="security">
+        <h2>8. Security & Privacy / 安全与隐私</h2>
+
+        <h3>Student Data Protection / 学生数据保护</h3>
+        <p>
+            As an education platform serving minors, ZenEduX implements strict data protection measures. Student learning data is used exclusively for improving the individual student's learning experience and is never sold, shared with third parties, or used for advertising purposes.
+        </p>
+
+        <h3>Content Safety / 内容安全</h3>
+        <p>
+            The platform implements multi-layered content safety guardrails: input filtering to detect and redirect inappropriate queries, output filtering to ensure all AI responses are educationally appropriate, topic boundaries that keep conversations focused on academic learning, and continuous monitoring for emerging safety concerns.
+        </p>
+
+        <h3>Access Control / 访问控制</h3>
+        <p>
+            ZenEduX uses an invitation-only registration system that serves dual purposes: maintaining a high-quality learning community and providing controlled growth that ensures system stability and support quality. Each student receives a personalized account with their own learning profile.
+        </p>
+    </section>
+
+    <!-- 9. Vision -->
+    <section id="vision">
+        <h2>9. Product Vision / 产品愿景</h2>
+
+        <div class="vision-box">
+            <p>
+                We envision a future where every Chinese student has access to a patient, knowledgeable, and truly helpful AI teacher &mdash; one that builds minds rather than creating dependencies.
+            </p>
+            <p>
+                我们的愿景：让每一个中国学生都能拥有一位耐心、博学、真正有益的AI老师 &mdash; 一位培养思维而非制造依赖的老师。
+            </p>
+        </div>
+
+        <p>
+            ZenEduX is not just a product; it is a statement about what AI education should be. In an era where most AI tools optimize for user engagement through instant gratification, ZenEduX optimizes for genuine learning outcomes. We believe that the measure of a great AI teacher is not how many answers it gives, but how many "aha moments" it creates.
+        </p>
+        <p>
+            禅学不仅仅是一款产品，更是对AI教育应有之义的回答。在这个多数AI工具通过即时满足来追求用户粘性的时代，禅学选择优化真实的学习效果。我们相信，一个伟大的AI老师，不在于它给出了多少答案，而在于它创造了多少"啊哈时刻"。
+        </p>
+    </section>
+
+    <!-- 10. Official Information -->
+    <section id="info">
+        <h2>10. Official Information / 官方信息</h2>
+
+        <table style="max-width: 500px;">
+            <tbody>
+                <tr>
+                    <td><strong>Product Name</strong></td>
+                    <td>ZenEduX (禅学)</td>
+                </tr>
+                <tr>
+                    <td><strong>Official Website</strong></td>
+                    <td><a href="https://zenedux.com">zenedux.com</a></td>
+                </tr>
+                <tr>
+                    <td><strong>Learning Portal</strong></td>
+                    <td><a href="https://study.zenedux.com">study.zenedux.com</a></td>
+                </tr>
+                <tr>
+                    <td><strong>Category</strong></td>
+                    <td>K12 AI Education</td>
+                </tr>
+                <tr>
+                    <td><strong>Target Users</strong></td>
+                    <td>Chinese students, Grades 1-12</td>
+                </tr>
+                <tr>
+                    <td><strong>Access</strong></td>
+                    <td>Invitation-only registration</td>
+                </tr>
+                <tr>
+                    <td><strong>China Access</strong></td>
+                    <td>Available without VPN</td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+
+</main>
+
+<footer>
+    <div class="container">
+        <strong style="font-size: 1.2em;">ZenEduX / 禅学</strong>
+        <div class="links">
+            <a href="https://zenedux.com">Official Website</a>
+            <a href="https://study.zenedux.com">Learning Portal</a>
+        </div>
+        <div class="copyright">
+            &copy; 2026 ZenEduX. All rights reserved. / 禅学 版权所有
+        </div>
+    </div>
+</footer>
+
+</body>
+</html>
