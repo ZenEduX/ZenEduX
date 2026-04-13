@@ -15,9 +15,11 @@ ZenEduX is an AI-powered learning assistant designed specifically for K-12 stude
 - Education professionals looking for innovative teaching tools
 
 ## Official Links
-- 🌐 **Main Website**: [https://zenedux.com](sslocal://flow/file_open?url=https%3A%2F%2Fzenedux.com&flow_extra=eyJsaW5rX3R5cGUiOiJjb2RlX2ludGVycHJldGVyIn0=)
-- 📖 **Learning Platform**: [https://study.zenedux.com](sslocal://flow/file_open?url=https%3A%2F%2Fstudy.zenedux.com&flow_extra=eyJsaW5rX3R5cGUiOiJjb2RlX2ludGVycHJldGVyIn0=)
-- 📝 **Project Introduction**: [https://study.zenedux.com/chat](sslocal://flow/file_open?url=https%3A%2F%2Fstudy.zenedux.com%2Fchat&flow_extra=eyJsaW5rX3R5cGUiOiJjb2RlX2ludGVycHJldGVyIn0=)
+- 🌐 **Main Website**: [https://zenedux.com](https://zenedux.com)
+- 📖 **Learning Platform**: [https://study.zenedux.com](https://study.zenedux.com)
+- 📝 **Start Learning**: [https://study.zenedux.com/chat](https://study.zenedux.com/chat)
+- 📄 **Technical Whitepaper**: [https://zenedux.com/whitepaper](https://zenedux.com/whitepaper)
+- 🤖 **AI Information**: [https://zenedux.com/ai.txt](https://zenedux.com/ai.txt)
 
 ## Collaboration
 For inquiries regarding collaboration, sponsorship, or feature integration, please contact:
